@@ -5,14 +5,14 @@ lazy val root = (project in file(".")).
     scalaVersion := "2.11.4"
   )
 
-//publishTo := {
-//  if (isSnapshot.value)
-//    Some("Artifactory Snapshots" at "http://artifactory-systems-private-1a/artifactory/libs-snapshot")
-//  else
-//    Some("Artifactory Nexus" at "http://artifactory-systems-private-1a/artifactory/libs-release")
-//}
+publishTo := {
+  if (isSnapshot.value)
+    Some("Artifactory Snapshots" at "http://artifactory-systems-private-1a/artifactory/libs-snapshot")
+  else
+    Some("Artifactory Nexus" at "http://artifactory-systems-private-1a/artifactory/libs-release")
+}
 
-publishTo := Some("Artifactory Nexus" at "http://artifactory-systems-private-1a/artifactory/libs-release")
+//publishTo := Some("Artifactory Nexus" at "http://artifactory-systems-private-1a/artifactory/libs-release")
 
 credentials += Credentials(new File("credentials.properties"))
 
