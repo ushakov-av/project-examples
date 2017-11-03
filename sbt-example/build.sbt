@@ -16,3 +16,5 @@ publishTo := {
 credentials += Credentials(new File("credentials.properties"))
 
 libraryDependencies += "org.apache.derby" % "derby" % "10.4.1.3"
+
+publishMavenStyle := true
