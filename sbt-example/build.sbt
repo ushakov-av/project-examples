@@ -19,12 +19,9 @@ libraryDependencies += "org.apache.derby" % "derby" % "10.4.1.3"
 
 publishMavenStyle := true
 
+artifact in (Compile, assembly) := {
+  val art = (artifact in (Compile, assembly)).value
+  art.copy(`classifier` = Some("assembly"))
+}
 
-
-
-  artifact in (Compile, assembly) := {
-    val art = (artifact in (Compile, assembly)).value
-    art.copy(`classifier` = Some("assembly"))
-  }
-
-addArtifact(artifact in (Compile, assembly), assembly)
+//addArtifact(artifact in (Compile, assembly), assembly)
