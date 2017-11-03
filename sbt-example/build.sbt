@@ -13,6 +13,6 @@ publishTo := {
 
 //publishTo := Some("Artifactory Nexus" at "http://artifactory-systems-private-1a/artifactory/libs-release")
 
-//credentials += Credentials(new File("credentials.properties"))
+credentials += Credentials(new File("credentials.properties"))
 
 libraryDependencies += "org.apache.derby" % "derby" % "10.4.1.3"
