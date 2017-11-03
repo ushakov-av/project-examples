@@ -1,0 +1,25 @@
+target
+project/*.lock
+spark-warehouse/
+**/.DS_Store
+
+
+#Intellij
+*.iml
+*.ipr
+*.iws
+.idea
+.idea_modules/
+out/
+
+
+# sbt specific
+.lib/
+.cache/
+.history/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
